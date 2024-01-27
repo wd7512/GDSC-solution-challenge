@@ -14,8 +14,8 @@ Our solution is a web application to reduce inequality in the NHS by developing 
 
 Draw.io link
 
-Frontend Technologies: 
+Frontend Technologies: Firebase
 
 ### Step 6: Design the backend technology
 
-Backend Technologies:
+Backend Technologies: Firebase, Google Cloud
