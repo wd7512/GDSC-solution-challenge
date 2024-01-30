@@ -1,3 +1,9 @@
+/*
+
+  Class encapsulating all categories, bodyparts, and symptoms.
+  - currently hardcoded, but can be changed to an ORM
+
+*/
 class DataStore {
   
   // map of data[category][bodypart]:symptoms

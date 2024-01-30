@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:symptom_checker/utility/button_util.dart';
 
+/*
+
+  File contains classes related to the symptom pages
+
+*/
+
 class SymptomButton extends StatelessWidget {
   final String symptom;
 

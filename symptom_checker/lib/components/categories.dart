@@ -3,6 +3,12 @@ import 'package:symptom_checker/components/bodypart.dart';
 import 'package:symptom_checker/models/datastore.dart';
 import 'package:symptom_checker/utility/button_util.dart';
 
+/*
+
+  File contains classes related to the category pages
+
+*/
+
 class CategoryButton extends StatelessWidget {
   final String category;
 
