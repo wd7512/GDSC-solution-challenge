@@ -6,18 +6,19 @@ class DataStore {
   
   // map of data[category][bodypart]:symptoms
   Map<String, Map<String, List<String>>> data = {
-    'head and face':{
+    'head':{
       'face':['acne', 'redness', 'swelling'],
       'ears':['pain', 'itchiness', 'ringing'],
       'eyes':['blurred vision', 'itchy eyes', 'tearing'],
       'nose':['congestion', 'runny nose', 'sneezing'],
-      'mouth':['bad breath', 'bleeding gums', 'toothache']
+      'mouth':['bad breath', 'bleeding gums', 'toothache'],
+      'internal':['headache'],
     },
     'torso':{
       'chest':['chest pain', 'shortness of breath', 'heart palpitations'],
       'abdomen':['abdominal pain', 'nausea', 'bloating'],
       'back':['lower back pain', 'muscle stiffness', 'numbness'],
-      'neck':['sore throat', 'hoarseness', 'difficulty swallowing']
+      'neck':['sore throat', 'hoarseness', 'difficulty swallowing'],
     },
     'arms':{
       'shoulders':['shoulder pain', 'tension', 'limited mobility'],
