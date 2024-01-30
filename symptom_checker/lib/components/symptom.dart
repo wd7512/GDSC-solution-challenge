@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:symptom_checker/models/selected_symptoms_store.dart';
 import 'package:symptom_checker/utility/button_util.dart';
 
 /*
@@ -41,14 +43,18 @@ class SymptomPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(symptom),
       ),
-      body: const Center(
+      body: Center(
         child: Padding(
-          padding: EdgeInsets.only(top: 16.0),
+          padding: const EdgeInsets.only(top: 16.0),
           child: Column(
             children: [
-              // TODO: add image of symptom
-              // TODO: add button that will add symptom to list of all symptoms
-              HomeButton()
+              ElevatedButton(
+                onPressed: () => {
+                  Provider.of<SelectedSymptoms>(context, listen: false).addSymptom(symptom),
+                },
+                child: const Text('Add Symptom'),
+              ),
+              const HomeButton(),
             ],
           ),
         ),
@@ -57,3 +63,4 @@ class SymptomPage extends StatelessWidget {
   }
 
 }
+
