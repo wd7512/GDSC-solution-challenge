@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:symptom_checker/components/categories.dart';
-import 'package:symptom_checker/models/datastore.dart';
+import 'package:provider/provider.dart';
+import 'package:symptom_checker/components/category.dart';
+import 'package:symptom_checker/components/selected_symptoms.dart';
+import 'package:symptom_checker/models/data_store.dart';
+import 'package:symptom_checker/models/selected_symptoms_store.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,14 +14,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Symptom Tracker',
-      home: const HomePage(),
-      theme: ThemeData(
-        useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 147, 164, 202)),
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Color.fromARGB(255, 147, 164, 202),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => SelectedSymptoms()),
+      ],
+      child: MaterialApp(
+        title: 'Symptom Tracker',
+        home: const HomePage(),
+        theme: ThemeData(
+          useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 147, 164, 202)),
+          appBarTheme: const AppBarTheme(
+            backgroundColor: Color.fromARGB(255, 147, 164, 202),
+          ),
         ),
       ),
     );
@@ -40,6 +48,7 @@ class HomePage extends StatelessWidget {
           child: Column(
             children: [
               for (String category in DataStore().getAllCategories()) CategoryButton(category: category),
+              const AllSymptomsButton()
             ],
           ),
         ),

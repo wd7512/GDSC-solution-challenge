@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:symptom_checker/components/bodypart.dart';
-import 'package:symptom_checker/models/datastore.dart';
+import 'package:symptom_checker/components/body_part.dart';
+import 'package:symptom_checker/models/data_store.dart';
 import 'package:symptom_checker/utility/button_util.dart';
 
 class CategoryButton extends StatelessWidget {
