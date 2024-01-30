@@ -3,6 +3,8 @@ import 'package:provider/provider.dart';
 import 'package:symptom_checker/models/selected_symptoms_store.dart';
 import 'package:symptom_checker/utility/button_util.dart';
 
+/// File contains classes to do with symptom interaction
+
 class AllSymptomsButton extends StatelessWidget{
   const AllSymptomsButton({super.key});
 

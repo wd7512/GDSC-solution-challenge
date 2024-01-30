@@ -3,11 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:symptom_checker/models/selected_symptoms_store.dart';
 import 'package:symptom_checker/utility/button_util.dart';
 
-/*
-
-  File contains classes related to the symptom pages
-
-*/
+/// File contains classes related to the symptom pages
 
 class SymptomButton extends StatelessWidget {
   final String symptom;

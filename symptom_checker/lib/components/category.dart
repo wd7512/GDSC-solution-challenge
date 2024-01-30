@@ -3,11 +3,8 @@ import 'package:symptom_checker/components/body_part.dart';
 import 'package:symptom_checker/models/data_store.dart';
 import 'package:symptom_checker/utility/button_util.dart';
 
-/*
-
-  File contains classes related to the category pages
-
-*/
+/// File contains classes related to the category pages
+ 
 
 class CategoryButton extends StatelessWidget {
   final String category;

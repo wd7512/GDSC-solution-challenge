@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+/// State Management for the symptoms
+
 class SelectedSymptoms extends ChangeNotifier {
   final Set<String> symptoms = <String>{};
 
