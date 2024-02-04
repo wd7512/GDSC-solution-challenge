@@ -5,6 +5,8 @@ import 'package:symptom_checker/utility/button_util.dart';
 
 /// File contains classes to do with symptom interaction
 
+// referred to from HomePage in main.dart
+// is a button that when pressed goes to the AllSymptomsPage
 class AllSymptomsButton extends StatelessWidget{
   const AllSymptomsButton({super.key});
 
@@ -24,6 +26,7 @@ class AllSymptomsButton extends StatelessWidget{
   }
 }
 
+// referred to from AllSymptomsButton
 class AllSymptomsPage extends StatelessWidget {
 
   const AllSymptomsPage({super.key});
@@ -37,6 +40,8 @@ class AllSymptomsPage extends StatelessWidget {
       body: Center(
         child: Padding(
           padding: const EdgeInsets.only(top: 16.0),
+          // a HomeButton at the top
+          // then adds all symptoms below by calling _SymptomsList
           child: Column(
             children: [
               const HomeButton(),
@@ -54,7 +59,10 @@ class AllSymptomsPage extends StatelessWidget {
   }
 }
 
-
+// referred to from AllSymptomsPage
+// returns (ListView) a scrollable list of widgets
+// where each one is a symptom with a button to remove
+// that symptom from SelectedSymptoms in models/selected_symptoms_store.dart
 class _SymptomsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
