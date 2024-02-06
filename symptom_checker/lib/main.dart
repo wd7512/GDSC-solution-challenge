@@ -7,7 +7,10 @@ import 'dart:math';
 import 'package:symptom_checker/models/selected_symptoms_store.dart';
 
 void main() {
-  runApp(MyApp());
+ runApp(MaterialApp(
+   title: 'Symptom Checker App',
+   home: MyApp(),
+ ));
 }
 
 class MyApp extends StatelessWidget {
@@ -21,7 +24,7 @@ class MyApp extends StatelessWidget {
         body: Stack(
           children: [
             Image.asset(
-              "assets/StickMan.jpeg",
+              "assets/CartoonPerson.jpeg",
               key: _imageKey,
               fit: BoxFit.contain,
               width: double.infinity,
@@ -36,10 +39,10 @@ class MyApp extends StatelessWidget {
                 print('Button pressed at coordinates: x=$x, y=$y, part=$part');
                 // goes to 
                 // Ensure the context used here has a Navigator
-                //Navigator.push(
-                //  context,
-                //  MaterialPageRoute(builder: (context) => AnotherPage()),
-                //);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CategoryPage(category: part)),
+                );
               },
             ),
           ],
