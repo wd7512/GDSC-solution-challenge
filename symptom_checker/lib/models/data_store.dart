@@ -33,7 +33,7 @@ class DataStore {
     'legs':{
       'hips':['hip pain', 'tightness', 'limb alignment issues'],
       'knees':['knee pain', 'swelling', 'instability'],
-      'ankles':['ankle pain', 'weakness', 'limited range of motion'],
+      'ankles':['ankle pain', 'weakness', 'limited range of dmotion'],
     },
     'skin':{
       'face':['rash', 'dry skin', 'wrinkles'],
