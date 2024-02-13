@@ -2,7 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:symptom_checker/components/category.dart';
-import 'package:symptom_checker/models/data_store.dart';
+// import 'package:symptom_checker/models/data_store.dart';
+import 'package:symptom_checker/models/location_store.dart';
 
 class BodySelectorStack extends StatelessWidget {
   const BodySelectorStack({super.key});
