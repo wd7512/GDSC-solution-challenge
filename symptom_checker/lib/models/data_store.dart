@@ -1,47 +1,137 @@
-
 /// Class encapsulating all categories, bodyparts, and symptoms.
-/// - currently hardcoded, but can be changed to an ORM
-/// 
-/// 
-/// 
-/// 
-import 'dart:math';
-
+/// - currently hardcoded, but should be changed to a database of some sort
+///
+///
 class DataStore {
-  
   // map of data[category][bodypart]:symptoms
   Map<String, Map<String, List<String>>> data = {
-    'head':{
-      'face':['acne', 'redness', 'swelling'],
-      'ears':['pain', 'itchiness', 'ringing'],
-      'eyes':['blurred vision', 'itchy eyes', 'tearing'],
-      'nose':['congestion', 'runny nose', 'sneezing'],
-      'mouth':['bad breath', 'bleeding gums', 'toothache'],
-      'internal':['headache'],
+    'head': {
+      'face': ['acne', 'redness', 'swelling'],
+      'ears': ['pain', 'itchiness', 'ringing'],
+      'eyes': ['blurred vision', 'itchy eyes', 'tearing'],
+      'nose': ['congestion', 'runny nose', 'sneezing'],
+      'mouth': ['bad breath', 'bleeding gums', 'toothache'],
+      'internal': ['headache'],
     },
-    'torso':{
-      'chest':['chest pain', 'shortness of breath', 'heart palpitations'],
-      'abdomen':['abdominal pain', 'nausea', 'bloating'],
-      'back':['lower back pain', 'muscle stiffness', 'numbness'],
-      'neck':['sore throat', 'hoarseness', 'difficulty swallowing'],
+    'torso': {
+      'chest': ['chest pain', 'shortness of breath', 'heart palpitations'],
+      'abdomen': ['abdominal pain', 'nausea', 'bloating'],
+      'back': ['lower back pain', 'muscle stiffness', 'numbness'],
+      'neck': ['sore throat', 'hoarseness', 'difficulty swallowing'],
     },
-    'arms':{
-      'shoulders':['shoulder pain', 'tension', 'limited mobility'],
-      'elbows':['elbow pain', 'numbness', 'weakness'],
-      'wrists':['wrist pain', 'tingling', 'stiffness'],
+    'arms': {
+      'shoulders': ['shoulder pain', 'tension', 'limited mobility'],
+      'elbows': ['elbow pain', 'numbness', 'weakness'],
+      'wrists': ['wrist pain', 'tingling', 'stiffness'],
     },
-    'legs':{
-      'hips':['hip pain', 'tightness', 'limb alignment issues'],
-      'knees':['knee pain', 'swelling', 'instability'],
-      'ankles':['ankle pain', 'weakness', 'limited range of dmotion'],
+    'legs': {
+      'hips': ['hip pain', 'tightness', 'limb alignment issues'],
+      'knees': ['knee pain', 'swelling', 'instability'],
+      'ankles': ['ankle pain', 'weakness', 'limited range of dmotion'],
     },
-    'skin':{
-      'face':['rash', 'dry skin', 'wrinkles'],
-      'body':['itchy skin', 'redness', 'hives'],
-      'nails':['brittle nails', 'yellowing', 'nail ridges']
+    'skin': {
+      'body': [
+        'itchy skin',
+        'redness',
+        'hives',
+        'rash',
+        'dry skin',
+        'wrinkles'
+      ],
+      'nails': ['brittle nails', 'yellowing', 'nail ridges']
     }
-};
+  };
 
+  // store for all image links
+  // is very ugly but will have to do until we add a database of some sort
+  Map<String, String> images = {
+    // body categories
+    'head': 'assets/images/default_image.jpeg',
+    'torso': 'assets/images/default_image.jpeg',
+    'arms': 'assets/images/default_image.jpeg',
+    'legs': 'assets/images/default_image.jpeg',
+    'skin': 'assets/images/default_image.jpeg',
+
+    // body parts
+    'face': 'assets/images/default_image.jpeg',
+    'ears': 'assets/images/default_image.jpeg',
+    'eyes': 'assets/images/default_image.jpeg',
+    'nose': 'assets/images/default_image.jpeg',
+    'mouth': 'assets/images/default_image.jpeg',
+    'internal': 'assets/images/default_image.jpeg',
+    'chest': 'assets/images/default_image.jpeg',
+    'abdomen': 'assets/images/default_image.jpeg',
+    'back': 'assets/images/default_image.jpeg',
+    'neck': 'assets/images/default_image.jpeg',
+    'shoulders': 'assets/images/default_image.jpeg',
+    'elbows': 'assets/images/default_image.jpeg',
+    'wrists': 'assets/images/default_image.jpeg',
+    'hips': 'assets/images/default_image.jpeg',
+    'knees': 'assets/images/default_image.jpeg',
+    'ankles': 'assets/images/default_image.jpeg',
+    'body': 'assets/images/default_image.jpeg',
+    'nails': 'assets/images/default_image.jpeg',
+
+    // symptoms
+    'acne': 'assets/images/default_image.jpeg',
+    'redness': 'assets/images/default_image.jpeg',
+    'swelling': 'assets/images/default_image.jpeg',
+    'pain': 'assets/images/default_image.jpeg',
+    'itchiness': 'assets/images/default_image.jpeg',
+    'ringing': 'assets/images/default_image.jpeg',
+    'blurred vision': 'assets/images/default_image.jpeg',
+    'itchy eyes': 'assets/images/default_image.jpeg',
+    'tearing': 'assets/images/default_image.jpeg',
+    'congestion': 'assets/images/default_image.jpeg',
+    'runny nose': 'assets/images/default_image.jpeg',
+    'sneezing': 'assets/images/default_image.jpeg',
+    'bad breath': 'assets/images/default_image.jpeg',
+    'bleeding gums': 'assets/images/default_image.jpeg',
+    'toothache': 'assets/images/default_image.jpeg',
+    'headache': 'assets/images/default_image.jpeg',
+    'chest pain': 'assets/images/default_image.jpeg',
+    'shortness of breath': 'assets/images/default_image.jpeg',
+    'heart palpitations': 'assets/images/default_image.jpeg',
+    'abdominal pain': 'assets/images/default_image.jpeg',
+    'nausea': 'assets/images/default_image.jpeg',
+    'bloating': 'assets/images/default_image.jpeg',
+    'lower back pain': 'assets/images/default_image.jpeg',
+    'muscle stiffness': 'assets/images/default_image.jpeg',
+    'numbness': 'assets/images/default_image.jpeg',
+    'sore throat': 'assets/images/default_image.jpeg',
+    'hoarseness': 'assets/images/default_image.jpeg',
+    'difficulty swallowing': 'assets/images/default_image.jpeg',
+    'shoulder pain': 'assets/images/default_image.jpeg',
+    'tension': 'assets/images/default_image.jpeg',
+    'limited mobility': 'assets/images/default_image.jpeg',
+    'elbow pain': 'assets/images/default_image.jpeg',
+    'weakness': 'assets/images/default_image.jpeg',
+    'wrist pain': 'assets/images/default_image.jpeg',
+    'tingling': 'assets/images/default_image.jpeg',
+    'stiffness': 'assets/images/default_image.jpeg',
+    'hip pain': 'assets/images/default_image.jpeg',
+    'tightness': 'assets/images/default_image.jpeg',
+    'limb alignment issues': 'assets/images/default_image.jpeg',
+    'knee pain': 'assets/images/default_image.jpeg',
+    'instability': 'assets/images/default_image.jpeg',
+    'ankle pain': 'assets/images/default_image.jpeg',
+    'limited range of motion': 'assets/images/default_image.jpeg',
+    'rash': 'assets/images/default_image.jpeg',
+    'dry skin': 'assets/images/default_image.jpeg',
+    'wrinkles': 'assets/images/default_image.jpeg',
+    'itchy skin': 'assets/images/default_image.jpeg',
+    'hives': 'assets/images/default_image.jpeg',
+    'brittle nails': 'assets/images/default_image.jpeg',
+    'yellowing': 'assets/images/default_image.jpeg',
+    'nail ridges': 'assets/images/default_image.jpeg',
+  };
+
+  String getImageUrl(String identifier) {
+    if (!images.containsKey(identifier)) {
+      return 'assets/images/default_image.jpeg';
+    }
+    return images[identifier]!;
+  }
 
   List<String> getAllCategories() {
     return data.keys.toList();
@@ -54,52 +144,14 @@ class DataStore {
     return data[category]!.keys.toList();
   }
 
-  List<String> getSymptomsByBodyPart(String category, String bodypart){
+  List<String> getSymptomsByBodyPart(String category, String bodypart) {
     if (!data.containsKey(category)) {
       return [];
     }
     if (!data[category]!.containsKey(bodypart)) {
       return [];
     }
-    
+
     return data[category]![bodypart] ?? [];
-  }
-
-}
-
-class LocationStore {
-  // Your existing map
-  Map<Point, String> data = {
-    Point(0.5, 0.2): 'head',
-    Point(0.5, 0.5): 'torso',
-    Point(0.65, 0.4): 'arms',
-    Point(0.35, 0.4): 'arms',
-    Point(0.5, 0.75): 'legs',
-  };
-
-  List<Point> getAllPoints() {
-    return data.keys.toList();
-  }
-
-  String findClosestPoint(Point loc) {
-    double minDistance = double.infinity;
-    Point closestPoint = Point(0, 0);
-
-    for (Point point in data.keys) {
-      double distance = calculateDistance(loc, point);
-
-      if (distance < minDistance) {
-        minDistance = distance;
-        closestPoint = point;
-      }
-    }
-
-    return data[closestPoint]!;
-  }
-
-  double calculateDistance(Point a, Point b) {
-    double dx = (a.x.toDouble() - b.x.toDouble());
-    double dy = (a.y.toDouble() - b.y.toDouble());
-    return sqrt(dx * dx + dy * dy);
   }
 }

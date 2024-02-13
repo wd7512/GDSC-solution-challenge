@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:symptom_checker/components/body_selector.dart';
+// import 'package:symptom_checker/components/body_selector.dart';
 import 'package:symptom_checker/components/category.dart';
-// import 'package:symptom_checker/components/category.dart';
 import 'package:symptom_checker/components/selected_symptoms.dart';
+// import 'package:symptom_checker/components/category.dart';
+// import 'package:symptom_checker/components/selected_symptoms.dart';
 import 'package:symptom_checker/models/data_store.dart';
 // import 'package:symptom_checker/models/data_store.dart';
 import 'package:symptom_checker/models/selected_symptoms_store.dart';
+// import 'package:symptom_checker/utility/footer.dart';
+import 'package:symptom_checker/utility/grid_util.dart';
 
 void main() {
   runApp(const MyApp());
@@ -41,6 +44,11 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<Widget> categoryButtons = DataStore()
+        .getAllCategories()
+        .map((category) => CategoryButton(category: category))
+        .toList();
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Symptom Checker'),
@@ -50,7 +58,9 @@ class HomePage extends StatelessWidget {
           padding: const EdgeInsets.only(top: 16.0),
           child: Column(
             children: [
-              for (String category in DataStore().getAllCategories()) CategoryButton(category: category),
+              Expanded(
+                child: TwoColumnGrid(children: [...categoryButtons]),
+              ),
               const AllSymptomsButton(),
               // BodySelectorStack(),
             ],
