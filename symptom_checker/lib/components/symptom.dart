@@ -27,7 +27,16 @@ class SymptomButton extends StatelessWidget {
           ),
         );
       },
-      child: Text(symptom),
+      child: SizedBox(
+        height: 150,
+        width: 150,
+        child: ClipOval( //crop image to oval
+          child: Image.asset("assets/$symptom.jpg", //add symptom image
+
+            fit: BoxFit.cover,
+          ),
+        ),
+      ),
     );
   }
 }
