@@ -1,6 +1,7 @@
+import 'dart:typed_data';
 import 'package:flutter/material.dart';
-
-/// State Management for the symptoms
+import 'package:pdf/widgets.dart' as pw;
+import 'package:printing/printing.dart';
 
 class SelectedSymptoms extends ChangeNotifier {
   final Set<String> symptoms = <String>{};
@@ -15,5 +16,42 @@ class SelectedSymptoms extends ChangeNotifier {
   void removeSymptom(String symptom) {
     symptoms.remove(symptom);
     notifyListeners();
+  }
+}
+
+Future<Uint8List> createPdf(List<String> selectedSymptoms) async {
+  final pdf = pw.Document();
+
+  pdf.addPage(
+    pw.Page(
+      build: (pw.Context context) {
+        return pw.Column(
+          crossAxisAlignment: pw.CrossAxisAlignment.start,
+          children: [
+            pw.Text('List of Patient Symptoms:'),
+            for (var symptom in selectedSymptoms) pw.Text('- $symptom'),
+          ],
+        );
+      },
+    ),
+  );
+  return pdf.save();
+}
+
+class PdfPreviewPage extends StatelessWidget {
+  final List<String> selectedSymptoms;
+  const PdfPreviewPage({Key? key, required this.selectedSymptoms})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('PDF Preview'),
+      ),
+      body: PdfPreview(
+        build: (context) => createPdf(selectedSymptoms),
+      ),
+    );
   }
 }

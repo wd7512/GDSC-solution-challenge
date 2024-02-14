@@ -32,9 +32,10 @@ class AllSymptomsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var symptomState = context.watch<SelectedSymptoms>();
-    List<Widget> symptomsList = symptomState.selectedSymptoms
+    List<Widget> symptomsWidgetList = symptomState.selectedSymptoms
         .map((symptom) => DeleteSymptomCard(symptom: symptom))
         .toList();
+    final selectedSymptoms = Provider.of<SelectedSymptoms>(context);
 
     return Scaffold(
       appBar: AppBar(
@@ -46,11 +47,23 @@ class AllSymptomsPage extends StatelessWidget {
           child: Column(
             children: [
               Expanded(
-                child: AutoGrid(
-                  children: [...symptomsList],
-                )
-              ),
+                  child: AutoGrid(
+                children: [...symptomsWidgetList],
+              )),
               const HomeButton(),
+              ElevatedButton(
+                onPressed: () async {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => PdfPreviewPage(
+                        selectedSymptoms: selectedSymptoms.selectedSymptoms,
+                      ),
+                    ),
+                  );
+                  // rootBundle.
+                },
+                child: const Text("Generate PDF"),
+              ),
             ],
           ),
         ),
