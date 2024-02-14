@@ -58,7 +58,7 @@ class BodyPartPage extends StatelessWidget {
           child: Column(
             children: [
               Expanded(
-                child: TwoColumnGrid(children: [...symptomButtons]),
+                child: AutoGrid(children: [...symptomButtons]),
               ),
               const Footer(),
             ],

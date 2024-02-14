@@ -54,7 +54,7 @@ class CategoryPage extends StatelessWidget {
           child: Column(
             children: [
               Expanded(
-                  child: TwoColumnGrid(children: [...bodyPartButtons]),
+                  child: AutoGrid(children: [...bodyPartButtons]),
                 ),
               const Footer()
 

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class TwoColumnGrid extends StatelessWidget {
+class AutoGrid extends StatelessWidget {
   final List<Widget> children;
   final int columnCount;
 
-  const TwoColumnGrid({super.key, required this.children, this.columnCount = 2});
+  const AutoGrid({super.key, required this.children, this.columnCount = 2});
 
   @override
   Widget build(BuildContext context) {

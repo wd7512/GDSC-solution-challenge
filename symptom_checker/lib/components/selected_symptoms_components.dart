@@ -46,7 +46,7 @@ class AllSymptomsPage extends StatelessWidget {
           child: Column(
             children: [
               Expanded(
-                child: TwoColumnGrid(
+                child: AutoGrid(
                   children: [...symptomsList],
                 )
               ),

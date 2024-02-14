@@ -60,7 +60,7 @@ class HomePage extends StatelessWidget {
           child: Column(
             children: [
               Expanded(
-                child: TwoColumnGrid(children: [...categoryButtons]),
+                child: AutoGrid(children: [...categoryButtons]),
               ),
               const AllSymptomsButton(),
             ],
