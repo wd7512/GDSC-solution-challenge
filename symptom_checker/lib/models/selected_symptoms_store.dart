@@ -28,7 +28,7 @@ Future<Uint8List> createPdf(List<String> selectedSymptoms) async {
         return pw.Column(
           crossAxisAlignment: pw.CrossAxisAlignment.start,
           children: [
-            pw.Text('Selected Symptoms:'),
+            pw.Text('List of Patient Symptoms:'),
             for (var symptom in selectedSymptoms) pw.Text('- $symptom'),
           ],
         );
