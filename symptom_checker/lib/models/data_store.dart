@@ -6,7 +6,7 @@ class DataStore {
   // map of data[category][bodypart]:symptoms
   Map<String, Map<String, List<String>>> data = {
     'head': {
-      'face': ['acne', 'redness', 'swelling'],
+      'face': ['acne', 'redness', 'swelling', 'rash'],
       'ears': ['pain', 'itchiness', 'ringing'],
       'eyes': ['blurred vision', 'itchy eyes', 'tearing'],
       'nose': ['congestion', 'runny nose', 'sneezing'],
@@ -15,7 +15,7 @@ class DataStore {
     },
     'torso': {
       'chest': ['chest pain', 'shortness of breath', 'heart palpitations'],
-      'abdomen': ['abdominal pain', 'nausea', 'bloating'],
+      'stomach': ['stomach pain', 'nausea', 'bloating'],
       'back': ['lower back pain', 'muscle stiffness', 'numbness'],
       'neck': ['sore throat', 'hoarseness', 'difficulty swallowing'],
     },
@@ -23,23 +23,17 @@ class DataStore {
       'shoulders': ['shoulder pain', 'tension', 'limited mobility'],
       'elbows': ['elbow pain', 'numbness', 'weakness'],
       'wrists': ['wrist pain', 'tingling', 'stiffness'],
+      'upper arm': [''],
+      'forearm': [''],
+      'hands': ['brittle nails']
     },
     'legs': {
       'hips': ['hip pain', 'tightness', 'limb alignment issues'],
       'knees': ['knee pain', 'swelling', 'instability'],
       'ankles': ['ankle pain', 'weakness', 'limited range of dmotion'],
+      'upper leg': [''],
+      'lower leg': [''],
     },
-    'skin': {
-      'body': [
-        'itchy skin',
-        'redness',
-        'hives',
-        'rash',
-        'dry skin',
-        'wrinkles'
-      ],
-      'nails': ['brittle nails', 'yellowing', 'nail ridges']
-    }
   };
 
   // store for all image links
@@ -50,7 +44,6 @@ class DataStore {
     'torso': 'assets/images/default_image.jpeg',
     'arms': 'assets/images/default_image.jpeg',
     'legs': 'assets/images/default_image.jpeg',
-    'skin': 'assets/images/default_image.jpeg',
 
     // body parts
     'face': 'assets/images/default_image.jpeg',
@@ -66,9 +59,14 @@ class DataStore {
     'shoulders': 'assets/images/default_image.jpeg',
     'elbows': 'assets/images/default_image.jpeg',
     'wrists': 'assets/images/default_image.jpeg',
+    'upper arm': 'assets/images/default_image.jpeg',
+    'forearm': 'assets/images/default_image.jpeg',
+    'hands': 'assets/images/default_image.jpeg',
     'hips': 'assets/images/default_image.jpeg',
     'knees': 'assets/images/default_image.jpeg',
     'ankles': 'assets/images/default_image.jpeg',
+    'upper leg': 'assets/images/default_image.jpeg',
+    'lower leg': 'assets/images/default_image.jpeg',
     'body': 'assets/images/default_image.jpeg',
     'nails': 'assets/images/default_image.jpeg',
 
@@ -125,6 +123,7 @@ class DataStore {
     'yellowing': 'assets/images/default_image.jpeg',
     'nail ridges': 'assets/images/default_image.jpeg',
   };
+
 
   String getImageUrl(String identifier) {
     if (!images.containsKey(identifier)) {
