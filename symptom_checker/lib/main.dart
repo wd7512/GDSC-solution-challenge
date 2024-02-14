@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:symptom_checker/components/body_area_selector.dart';
 // import 'package:symptom_checker/components/body_selector.dart';
 import 'package:symptom_checker/components/category_components.dart';
 import 'package:symptom_checker/components/selected_symptoms_components.dart';
@@ -45,24 +46,25 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> categoryButtons = DataStore()
-        .getAllCategories()
-        .map((category) => CategoryButton(category: category))
-        .toList();
+    // List<Widget> categoryButtons = DataStore()
+    //     .getAllCategories()
+    //     .map((category) => CategoryButton(category: category))
+    //     .toList();
 
     return Scaffold(
       appBar: AppBar(
         title: const Text('Symptom Checker'),
       ),
-      body: Center(
+      body: const Center(
         child: Padding(
-          padding: const EdgeInsets.only(top: 16.0),
+          padding: EdgeInsets.only(top: 16.0),
           child: Column(
             children: [
-              Expanded(
-                child: AutoGrid(children: [...categoryButtons]),
-              ),
-              const AllSymptomsButton(),
+              // Expanded(
+              //   child: AutoGrid(children: [...categoryButtons]),
+              // ),
+              Expanded(child: BodyAreaSelector()),
+              AllSymptomsButton(),
             ],
           ),
         ),
