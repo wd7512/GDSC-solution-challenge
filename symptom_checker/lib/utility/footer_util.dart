@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:symptom_checker/components/selected_symptoms.dart';
+import 'package:symptom_checker/components/selected_symptoms_components.dart';
 import 'package:symptom_checker/utility/button_util.dart';
 
 // Reusable component for footer

@@ -2,11 +2,11 @@ import 'dart:math';
 
 class LocationStore {
   Map<Point, String> data = {
-    Point(0.5, 0.2): 'head',
-    Point(0.5, 0.5): 'torso',
-    Point(0.65, 0.4): 'arms',
-    Point(0.35, 0.4): 'arms',
-    Point(0.5, 0.75): 'legs',
+    const Point(0.5, 0.2): 'head',
+    const Point(0.5, 0.5): 'torso',
+    const Point(0.65, 0.4): 'arms',
+    const Point(0.35, 0.4): 'arms',
+    const Point(0.5, 0.75): 'legs',
   };
 
   List<Point> getAllPoints() {
@@ -15,7 +15,7 @@ class LocationStore {
 
   String findClosestPoint(Point loc) {
     double minDistance = double.infinity;
-    Point closestPoint = Point(0, 0);
+    Point closestPoint = const Point(0, 0);
 
     for (Point point in data.keys) {
       double distance = calculateDistance(loc, point);

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:symptom_checker/components/body_part.dart';
-import 'package:symptom_checker/components/image_container.dart';
+import 'package:symptom_checker/components/bodypart_components.dart';
+import 'package:symptom_checker/utility/image_button_util.dart';
 import 'package:symptom_checker/models/data_store.dart';
 // import 'package:symptom_checker/utility/button_util.dart';
-import 'package:symptom_checker/utility/footer.dart';
+import 'package:symptom_checker/utility/footer_util.dart';
 import 'package:symptom_checker/utility/grid_util.dart';
 
 /// File contains classes related to the category pages

@@ -16,7 +16,7 @@ class ImageButton extends StatelessWidget {
     String imageUrl = DataStore().getImageUrl(identifier);
 
     double defaultWidth = MediaQuery.of(context).size.width / 2;
-    double maxWidth = 120.0;
+    double maxWidth = 600.0;
 
     double buttonSize = defaultWidth > maxWidth ? maxWidth : defaultWidth;
 

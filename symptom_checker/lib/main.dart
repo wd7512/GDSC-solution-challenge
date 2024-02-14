@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 // import 'package:symptom_checker/components/body_selector.dart';
-import 'package:symptom_checker/components/category.dart';
-import 'package:symptom_checker/components/selected_symptoms.dart';
+import 'package:symptom_checker/components/category_components.dart';
+import 'package:symptom_checker/components/selected_symptoms_components.dart';
 // import 'package:symptom_checker/components/category.dart';
 // import 'package:symptom_checker/components/selected_symptoms.dart';
 import 'package:symptom_checker/models/data_store.dart';
@@ -29,7 +29,8 @@ class MyApp extends StatelessWidget {
         home: const HomePage(),
         theme: ThemeData(
           useMaterial3: true,
-          colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 147, 164, 202)),
+          colorScheme: ColorScheme.fromSeed(
+              seedColor: const Color.fromARGB(255, 147, 164, 202)),
           appBarTheme: const AppBarTheme(
             backgroundColor: Color.fromARGB(255, 147, 164, 202),
           ),
@@ -62,7 +63,6 @@ class HomePage extends StatelessWidget {
                 child: TwoColumnGrid(children: [...categoryButtons]),
               ),
               const AllSymptomsButton(),
-              // BodySelectorStack(),
             ],
           ),
         ),
@@ -70,4 +70,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-

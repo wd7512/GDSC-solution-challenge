@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:symptom_checker/components/image_container.dart';
+import 'package:symptom_checker/utility/image_button_util.dart';
 import 'package:symptom_checker/models/selected_symptoms_store.dart';
 import 'package:symptom_checker/utility/button_util.dart';
 import 'package:symptom_checker/utility/grid_util.dart';
@@ -67,9 +67,11 @@ class DeleteSymptomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
-      ImageButton(
-        identifier: symptom,
-        onPressed: () {},
+      Expanded(
+        child: ImageButton(
+          identifier: symptom,
+          onPressed: () {},
+        ),
       ),
       IconButton(
         icon: const Icon(Icons.remove),
