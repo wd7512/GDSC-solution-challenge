@@ -1,16 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:symptom_checker/components/body_area_selector.dart';
-// import 'package:symptom_checker/components/body_selector.dart';
-import 'package:symptom_checker/components/category_components.dart';
 import 'package:symptom_checker/components/selected_symptoms_components.dart';
-// import 'package:symptom_checker/components/category.dart';
-// import 'package:symptom_checker/components/selected_symptoms.dart';
-import 'package:symptom_checker/models/data_store.dart';
-// import 'package:symptom_checker/models/data_store.dart';
 import 'package:symptom_checker/models/selected_symptoms_store.dart';
-// import 'package:symptom_checker/utility/footer.dart';
-import 'package:symptom_checker/utility/grid_util.dart';
 import 'package:symptom_checker/components/settings_page.dart';
 
 void main() {
