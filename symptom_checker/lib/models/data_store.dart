@@ -39,9 +39,9 @@ class DataStore {
 
   String getImageUrl(String identifier) {
   if (SettingsStore.isColorBlind) {
-    return 'default_image_colorblind.jpg';
+    return 'assets/default_image_colorblind.jpg';
   } else {
-    return 'default_image.jpeg';
+    return 'assets/default_image.jpeg';
   }
   }
 
