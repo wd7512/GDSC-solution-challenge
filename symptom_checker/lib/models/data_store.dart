@@ -1,7 +1,8 @@
 /// Class encapsulating all categories, bodyparts, and symptoms.
 /// - currently hardcoded, but should be changed to a database of some sort
-///
-///
+
+import 'package:symptom_checker/models/settings_store.dart';
+
 class DataStore {
   // map of data[category][bodypart]:symptoms
   Map<String, Map<String, List<String>>> data = {
@@ -37,12 +38,11 @@ class DataStore {
   };
 
   String getImageUrl(String identifier) {
-    // if (!images.containsKey(identifier)) {
-    //   return 'assets/images/default_image.jpeg';
-    // }
-    // return images[identifier]!;
-    return 'assets/default_image.jpeg';
-    // return "assets/${identifier.contains(" ") ? identifier.replaceAll(" ", "%") : identifier}.jpg";
+  if (SettingsStore.isColorBlind) {
+    return 'default_image_colorblind.jpg';
+  } else {
+    return 'default_image.jpeg';
+  }
   }
 
   List<String> getAllCategories() {
