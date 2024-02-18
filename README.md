@@ -26,6 +26,8 @@ Goal 10: Reduced Inequalities
 
 Our solution is a web application to reduce inequality in the NHS by developing an accessible application for describing symptoms. It is targeted towards people who struggle to communicate with NHS staff such as people who do not speak English natively or people with learning disabilities. This can lead to delayed or mistreatment of certain demographics and we aim to combat this. 
 
+## User Feedback
+
 ## Technologies
 Design: Draw.io   
 Frontend Technologies: Flutter (Dart), Firebase  
