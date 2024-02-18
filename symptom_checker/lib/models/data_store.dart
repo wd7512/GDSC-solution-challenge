@@ -10,7 +10,7 @@ class DataStore {
       'eyes': ['blurred vision', 'itchy eyes', 'tearing'],
       'nose': ['congestion', 'runny nose', 'sneezing'],
       'mouth': ['bad breath', 'bleeding gums', 'toothache'],
-      'internal': ['headache'],
+      //'internal': ['headache'],
     },
     'torso': {
       'chest': ['chest pain', 'shortness of breath', 'heart palpitations'],

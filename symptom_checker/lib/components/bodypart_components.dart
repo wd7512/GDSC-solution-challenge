@@ -45,7 +45,7 @@ class BodyPartPage extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Widget> symptomButtons = DataStore()
         .getSymptomsByBodyPart(category, bodypart)
-        .map((symptom) => AddSymptomCard(symptom: symptom))
+        .map((symptom) => AddSymptomCard(symptom: symptom, category: category))
         .toList();
 
     return Scaffold(
@@ -71,8 +71,9 @@ class BodyPartPage extends StatelessWidget {
 
 class AddSymptomCard extends StatelessWidget {
   final String symptom;
+  final String category;
 
-  const AddSymptomCard({super.key, required this.symptom});
+  const AddSymptomCard({super.key, required this.symptom, required this.category});
 
   @override
   Widget build(BuildContext context) {
@@ -87,7 +88,7 @@ class AddSymptomCard extends StatelessWidget {
         icon: const Icon(Icons.add),
         onPressed: () {
           Provider.of<SelectedSymptoms>(context, listen: false)
-              .addSymptom(symptom);
+              .addSymptom(category + " : "+ symptom);
         },
       ),
     ]);
