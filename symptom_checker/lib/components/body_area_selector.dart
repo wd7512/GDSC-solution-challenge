@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:symptom_checker/components/category_components.dart';
+import 'dart:math';
 
 class BodyAreaSelector extends StatelessWidget {
   const BodyAreaSelector({super.key});
@@ -11,7 +12,7 @@ class BodyAreaSelector extends StatelessWidget {
     String part = BodySelectorStore(
       imageWidth: renderBox.size.width,
       imageHeight: renderBox.size.height,
-    ).getSelectedArea(localPosition.dx, localPosition.dy);
+    ).getSelectedAreaPoints(localPosition.dx, localPosition.dy);
 
     if (part != '') {
       Navigator.push(
@@ -37,6 +38,7 @@ class BodySelectorStore {
   double imageWidth;
   double imageHeight;
   late Map<String, List<double>> areas;
+  late Map<String, List<double>> points;
 
   BodySelectorStore({required this.imageWidth, required this.imageHeight}) {
     // areas stored as category:[minX,maxX,minY,maxY]
@@ -62,6 +64,14 @@ class BodySelectorStore {
         imageHeight
       ],
     };
+
+    points = {
+      'head': [imageWidth * 0.5, imageHeight * 0.9],
+      'torso': [imageWidth * 0.5, imageHeight * 0.6],
+      'leftArm': [imageWidth * 0.25, imageHeight * 0.6],
+      'rightArm': [imageWidth * 0.75, imageHeight * 0.6],
+      'legs': [imageWidth * 0.5, imageHeight * 0.3]
+    };
   }
 
   String getSelectedArea(double x, double y) {
@@ -79,5 +89,28 @@ class BodySelectorStore {
       }
     }
     return '';
+  }
+
+  // this is not fully tested / working yet
+  String getSelectedAreaPoints(double x, double y) {
+    String body_part = '';
+    num distance = pow(2,32);
+    for (var entry in points.entries) {
+      List<double> coordinates = entry.value;
+      num local_distance = pow(pow(x - coordinates[0], 2) + pow(x-coordinates[1],2), 0.5);
+      if (local_distance < distance) {
+        body_part = entry.key;
+        distance = local_distance;
+
+        
+      }
+    }
+    print(body_part);
+    print(distance);
+    if (body_part == "leftArm" || body_part == "rightArm") {
+          return "arms";
+        } else {
+          return body_part;
+        }
   }
 }
