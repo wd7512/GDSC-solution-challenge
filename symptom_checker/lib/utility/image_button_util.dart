@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:symptom_checker/models/data_store.dart';
+import 'package:symptom_checker/models/settings_store.dart';
 
 class ImageButton extends StatelessWidget {
   final String identifier;
@@ -32,11 +33,22 @@ class ImageButton extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(10.0),
-            child: Image.asset(
+            child: SettingsStore.isColorBlind
+          ? ColorFiltered(
+              colorFilter: ColorFilter.mode(
+                Colors.grey,
+                BlendMode.saturation,
+              ),
+              child: Image.asset(
+                imageUrl,
+                fit: BoxFit.fill,
+              ),
+            )
+          : Image.asset(
               imageUrl,
               fit: BoxFit.fill,
             ),
-          ),
+    ),
 
           // TEMP: shows text on top of default image
           Positioned.fill(
