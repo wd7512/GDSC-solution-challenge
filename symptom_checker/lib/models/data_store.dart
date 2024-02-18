@@ -39,9 +39,9 @@ class DataStore {
 
   String getImageUrl(String identifier) {
   if (SettingsStore.isColorBlind) {
-    return 'assets/default_image_colorblind.jpg';
+    return 'assets/${identifier.contains(" ") ? identifier.replaceAll(" ", "%") : identifier}-cb.jpg';
   } else {
-    return 'assets/default_image.jpeg';
+    return 'assets/${identifier.contains(" ") ? identifier.replaceAll(" ", "%") : identifier}.jpg';
   }
   }
 
