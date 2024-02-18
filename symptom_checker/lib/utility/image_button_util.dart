@@ -54,7 +54,7 @@ class ImageButton extends StatelessWidget {
           Positioned.fill(
             child: Align(
               alignment: Alignment.center,
-              child: Text(identifier),
+              //child: Text(identifier),
             ),
           ),
         ],
