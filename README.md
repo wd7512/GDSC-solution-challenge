@@ -1,6 +1,14 @@
-# GDSC-solution-challenge
+# 2024 GDSC Solution Challenge
+# Team
+| Team Members    |
+| -------- | 
+| William Dennis  |  
+| Ore Benson  | 
+| Sena Polat  | 
+| Lamb Chen  | 
 
-https://developers.google.com/community/gdsc-solution-challenge/timeline
+
+
 
 ### Step 3: UN Sustainable Development Goals
  - 3 - good health and wellbeing
