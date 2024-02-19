@@ -12,7 +12,9 @@ Within national and local health services, there exist substanital challenges re
 This issue affects a broad spectrum of the population, particularly those with language or literacy barriers. As a result, this can lead to misdiagnosis or delayed treatement.
 
 ## Solution: Symplify
-Symplify is a web and mobile application that aims to resolve the challenges present in patient-doctor communication and thus reducing inequalities in accessing healthcare.
+Symplify is a web and mobile application that allows patients to view images of potential symptoms they may have and add them to a list of "All Symptoms" 
+
+aims to resolve the challenges present in patient-doctor communication and thus reducing inequalities in accessing healthcare.
 
 
 ### Motivation
@@ -21,7 +23,6 @@ Being first generation and second generation immigrants, we understand first-han
 ### Chosen UN Sustainable Development Goals
 Goal 3: Good health and Wellbeing  
 Goal 10: Reduced Inequalities   
-
 
 Our solution is a web application to reduce inequality in the NHS by developing an accessible application for describing symptoms. It is targeted towards people who struggle to communicate with NHS staff such as people who do not speak English natively or people with learning disabilities. This can lead to delayed or mistreatment of certain demographics and we aim to combat this. 
 
