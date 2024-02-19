@@ -12,7 +12,7 @@ Within national and local health services, there exist substanital challenges re
 This issue affects a broad spectrum of the population, particularly those with language or literacy barriers. As a result, this can lead to misdiagnosis or delayed treatement.
 
 ## Solution: Symplify
-Symplify is a web and mobile application that allows patients to view images of potential symptoms they may have and add them to a list of "All Symptoms" 
+Symplify is a web and mobile application that aims to reducing inequalities in access to healthcare by making patient-doctor communication more accessible. The application removes the need for verbal patients to view images of potential symptoms they may have and add them to a list of "All Symptoms".
 
 aims to resolve the challenges present in patient-doctor communication and thus reducing inequalities in accessing healthcare.
 
