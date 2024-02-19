@@ -8,16 +8,15 @@
 | Lamb Chen  | 
 
 ## Problem Statement
-Within national and local health services, there exist substanital challenges related to inequality in accessing healthcare. Traditional communication methods may be inaccessible or intimidating for certain demographic groups, leading to disparities in healthcare outcomes. 
+Within national and local health services, there exist substanital challenges related to inequality in accessing healthcare. In particular,  Traditional communication methods may be inaccessible or intimidating for certain demographic groups, leading to disparities in healthcare outcomes. 
 This issue affects a broad spectrum of the population, particularly those with language or literacy barriers. As a result, this can lead to misdiagnosis or delayed treatement.
 
 ## Solution: Symplify
-web application to resolve issues w inequalities to accessing healthcare. 
+Symplify is a web and mobile application that aims to resolve the challenges present in patient-doctor communication and thus reducing inequalities in accessing healthcare.
+
 
 ### Motivation
-
-(first gen, second gen, combining w pressure in NHS)
-Combining these factors, we decided to design a solution to resolve difficulties in patient-doctor communication.
+Being first generation and second generation immigrants, we understand first-hand the difficulties surrounding communication and accurately articulating the thoughts we or our family members have to others. Putting this in a healthcare context, we know the NHS in the UK are under immense pressure and would like to design a solution that can help alleviate that strain. Combining these factors, we decided to design a solution to resolve difficulties within patient-doctor communication. 
 
 ### Chosen UN Sustainable Development Goals
 Goal 3: Good health and Wellbeing  
