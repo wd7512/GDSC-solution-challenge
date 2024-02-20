@@ -22,10 +22,14 @@ Being first generation and second generation immigrants, we understand first-han
 Goal 3: Good health and Wellbeing  
 Goal 10: Reduced Inequalities   
 
+### Minimum viable product (MVP)
+To create a web and mobile application that allows the user to add symptoms of basic body parts and generate a PDF of the symptoms they have. 
+
 ## Feedback / Testing / Iteration
 ### User Feedback
-1. The user had no indicator that a symptom had been selected
-2. Each image is a button that does nothing when pressed. Instead you have to press the "+" button to add a symptom but this does not feel intuitive.
+1. Improve initial page -  
+2. The user had no indicator that a symptom had been selected
+3. Each image is a button that does nothing when pressed. Instead you have to press the "+" button to add a symptom but this does not feel intuitive.
 
 ## Architecutre & Technologies
 Design: Draw.io   
@@ -33,6 +37,8 @@ Frontend Technologies: Flutter (Dart), Firebase
 Backend Technologies: Flutter (Dart), Firebase, Google Cloud    
 
 ## Future Steps
-- Utilise TensorFlow to add additional camera feature that enables patients to take a photo of physical symptoms to get them identified e.g. papercut  
-- Improve aesthetics of the app to enhance accessibility and ease of use further
 - Obtain more cohesive images (so they are in the same style) for the symptoms, potentially using Vertex AI
+- Add more symptoms for each body part
+  Utilise TensorFlow to add additional camera feature that enables patients to take a photo of physical symptoms to get them identified e.g. papercut  
+- Improve aesthetics of the app to enhance accessibility and ease of use further
+
