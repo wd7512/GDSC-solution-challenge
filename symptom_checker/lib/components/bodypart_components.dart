@@ -88,7 +88,7 @@ class AddSymptomCard extends StatelessWidget {
         icon: const Icon(Icons.add),
         onPressed: () {
           Provider.of<SelectedSymptoms>(context, listen: false)
-              .addSymptom(category + " : "+ symptom);
+              .addSymptom(symptom);
         },
       ),
     ]);
