@@ -20,15 +20,17 @@ Being first generation and second generation immigrants, we understand first-han
 Goal 3: Good health and Wellbeing  
 Goal 10: Reduced Inequalities   
 
-## User Feedback 
-- The user had no indicator that a symptom had been selected
-- Each image is a button that does nothing when pressed. Instead you have to press the "+" button to add a symptom but this does not feel intuitive.
+## Feedback / Testing / Iteration
+### User Feedback
+1. The user had no indicator that a symptom had been selected
+2. Each image is a button that does nothing when pressed. Instead you have to press the "+" button to add a symptom but this does not feel intuitive.
 
-## Future Steps
-- Utilise TensorFlow to add additional camera feature that enables patients to take a photo of physical symptoms to get them identified e.g. papercut  
-- Improve aesthetics of the app to enhance accessibility and ease of use further. 
-
-## Technologies
+## Architecutre & Technologies
 Design: Draw.io   
 Frontend Technologies: Flutter (Dart), Firebase  
 Backend Technologies: Flutter (Dart), Firebase, Google Cloud    
+
+## Future Steps
+- Utilise TensorFlow to add additional camera feature that enables patients to take a photo of physical symptoms to get them identified e.g. papercut  
+- Improve aesthetics of the app to enhance accessibility and ease of use further
+- Obtain more cohesive images (so they are in the same style) for the symptoms, potentially using Vertex AI
