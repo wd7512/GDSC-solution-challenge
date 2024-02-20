@@ -1,5 +1,7 @@
 # 2024 GDSC Solution Challenge
 ## Team
+University students part of the Google Developer Student Club at the University of Bristol
+
 | Team Members    |
 | -------- | 
 | William Dennis  |  
