@@ -54,3 +54,5 @@ Backend Technologies: Flutter (Dart), Firebase, Google Cloud, Android
   Utilise TensorFlow to add additional camera feature that enables patients to take a photo of physical symptoms to get them identified e.g. papercut  
 - Improve aesthetics of the app to enhance accessibility and ease of use further
 
+## Demo Video Link
+[https://youtu.be/YfoFTTodhO8](https://youtu.be/YfoFTTodhO8)
