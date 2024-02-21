@@ -38,8 +38,8 @@ To create a web and mobile application that allows the user to add symptoms of b
 
 ## Architecutre & Technologies
 Design: Draw.io   
-Frontend Technologies: Flutter (Dart), Firebase  
-Backend Technologies: Flutter (Dart), Firebase, Google Cloud    
+Frontend Technologies: Flutter (Dart), Firebase, Android  
+Backend Technologies: Flutter (Dart), Firebase, Google Cloud, Android      
 
 ## Future Steps
 - Obtain more cohesive images (so they are in the same style) for the symptoms, potentially using Vertex AI
