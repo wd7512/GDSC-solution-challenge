@@ -1,8 +1,8 @@
 # 2024 GDSC Solution Challenge
 
 ## How to run Symplify:
-1. Can just view through our deployment on [https://flutter-symptoms.web.app/](https://flutter-symptoms.web.app/)
-OR
+1. Can just view through our deployment on [https://flutter-symptoms.web.app/](https://flutter-symptoms.web.app/)   
+OR   
 1. Clone the repository
 2. Install the Flutter and any other additional requirements.
 3. Run `flutter run`    
