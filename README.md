@@ -1,4 +1,11 @@
 # 2024 GDSC Solution Challenge
+
+## How to run Symplify:
+1. Clone the repository
+2. Install the Flutter and any other additional requirements.
+3. Run `flutter run`
+Note: Not all body part images have been implemented so may not load! We are working on adding them all in the future but we sadly did not have enough time.
+
 ## Team
 University students part of the [Google Developer Student Club at the University of Bristol](https://gdsc.community.dev/university-of-bristol/).
 
