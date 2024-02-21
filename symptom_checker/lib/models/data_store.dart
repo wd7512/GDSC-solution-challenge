@@ -36,7 +36,7 @@ class DataStore {
   };
 
   String getImageUrl(String identifier) {
-    return '${identifier.contains(" ") ? identifier.replaceAll(" ", "_") : identifier}.jpg';
+    return 'assets/${identifier.contains(" ") ? identifier.replaceAll(" ", "_") : identifier}.jpg';
     //return 'assets/${identifier.contains(" ") ? identifier.replaceAll(" ", "_") : identifier}.jpg';
   }
 
