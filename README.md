@@ -1,6 +1,6 @@
 # 2024 GDSC Solution Challenge
 ## Team
-University students part of the Google Developer Student Club at the [University of Bristo]](https://gdsc.community.dev/university-of-bristol/).
+University students part of the Google Developer Student Club at the [University of Bristol](https://gdsc.community.dev/university-of-bristol/).
 
 | Team Members    |
 | -------- | 
