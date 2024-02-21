@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 // Reusable button component for returning home from any page
+
 class HomeButton extends StatelessWidget {
   const HomeButton({super.key});
 
