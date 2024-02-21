@@ -51,12 +51,12 @@ class ImageButton extends StatelessWidget {
     ),
 
           // TEMP: shows text on top of default image
-          Positioned.fill(
-            child: Align(
-              alignment: Alignment.center,
-              //child: Text(identifier),
-            ),
-          ),
+          // Positioned.fill(
+          //   child: Align(
+          //     alignment: Alignment.center,
+          //     child: Text(identifier),
+          //   ),
+          // ),
         ],
       ),
     );
