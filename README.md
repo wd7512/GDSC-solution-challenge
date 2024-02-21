@@ -27,9 +27,14 @@ To create a web and mobile application that allows the user to add symptoms of b
 
 ## Feedback / Testing / Iteration
 ### User Feedback
-1. Improve initial page -  
-2. The user had no indicator that a symptom had been selected
-3. Each image is a button that does nothing when pressed. Instead you have to press the "+" button to add a symptom but this does not feel intuitive.
+1. Could add feature for colour blind people?
+2. Could export the symptoms outside the app (not just provide a list within the app).
+3. Improve the inital page by allowing user to click on a specific body area rather than a button
+
+### Improvements based on user feedback
+1. Created a monochrome mode where images would be displayed with a monochrome filter to increase accessibility
+2. Implemented a PDF list generator instead of having a list within the app
+3. Added a body map users can click on specific body parts to search for symptoms on
 
 ## Architecutre & Technologies
 Design: Draw.io   
